@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  --font-display: "Inter", sans-serif;
+  color-scheme: light;
+}
+
+/* .dark {
+  color-scheme: light;
+} */
+
+@layer base {
+  html {
+    font-family: var(--font-display);
+    scroll-behavior: smooth;
+  }
+  body {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    color: #0f172a;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  body.dark {
+    background-color: #020617;
+    color: #e2e8f0;
+  }
+}
+.input-box {
+  width: 100%;
+  padding: 16px 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  background: #ffffff;
+  font-size: 0.95rem;
+  color: #111827;
+  transition: all 0.25s ease;
+}
+
+.input-box:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.12);
+  outline: none;
+}
+
+.input-box-error {
+  border-color: #ef4444;
+}
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #0f7bf0;
+  padding: 16px 18px;
+  border-radius: 1rem;
+  font-size: 0.97rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 12px 30px rgba(19, 104, 236, 0.14);
+}
+
+.btn-primary:hover {
+  background-color: #0f7bf0;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid rgba(37,99,235,0.35);
+  outline-offset: 2px;
+}

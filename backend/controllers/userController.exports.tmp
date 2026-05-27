@@ -1,0 +1,6 @@
+module.exports={
+    getUsers,
+    getUserById,
+    updateProfile,
+    removeProfileImage
+};
